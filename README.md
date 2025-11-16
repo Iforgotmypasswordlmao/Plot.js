@@ -1,5 +1,5 @@
 # Plot.js
-A "data visualisation" "library", yeah its kinda scuffed. My first attempt at creating a "js package/library". Demo Website link: 
+A "data visualisation" "library" using Canvas, yeah its kinda scuffed. My first attempt at creating a "js package/library". Though one thing going for it is that its all in vanilla javascript. Demo Website link: <https://iforgotmypasswordlmao.github.io/Plot.js/>
 
 ### Scatter Plot
 <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/e236c5a9-dded-4051-a557-2690d8b059ac" />
