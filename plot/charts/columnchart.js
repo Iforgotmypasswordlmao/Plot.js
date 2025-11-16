@@ -10,9 +10,13 @@ export class ColumnChart extends Graph
     plot_column(data, {colours=this._default_colours, labels=[], label_offset=10, bar_width=30})
     {
         const column_width = this._domain_length/data.length
+        bar_width = Math.min(column_width*this.x_axis_unit, bar_width)
+        
         for (let d2 in data)
         {
-            const value = data[d2]
+            let value = data[d2]
+            value = Math.min(this._range[1], value)
+
             const prev_column = column_width*d2
             const middle_of_column = column_width/2
             const current_column = prev_column + middle_of_column

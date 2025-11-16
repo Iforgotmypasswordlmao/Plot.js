@@ -14,9 +14,12 @@ export class BarChart extends Graph
     plot_bar(data, {colours=this._default_colours, labels=[], label_offset=20, bar_width=20})
     {
         const row_height = this._range_length/data.length
+        bar_width = Math.min(bar_width, row_height*this.y_axis_unit)
         for (let d1 in data)
         {
-            const value = data[d1]
+            let value = data[d1]
+            value = Math.min(this._domain[1], value)
+
             const prev_rows = row_height*d1
             const middle_of_row = row_height/2
             const current_row = prev_rows + middle_of_row
