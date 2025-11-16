@@ -12,15 +12,15 @@ export class Plot extends Graph
         super(canvas, domain, range, options)
 
         const default_params = [0, 100]
-        this.ScatterPlot = new ScatterPlot(canvas, domain, range, options)
-        
-        this.BarChart = new BarChart(canvas, domain, default_params, options)
+        this.ScatterPlot = new ScatterPlot(canvas, domain, range, {options: options})
 
-        this.ColumnChart = new ColumnChart(canvas, default_params, range, options)
+        this.BarChart = new BarChart(canvas, domain, default_params, {options: options})
 
-        this.LineChart = new LineChart(canvas, domain, range, options)
+        this.ColumnChart = new ColumnChart(canvas, default_params, range, {options: options})
 
-        this.PieChart = new PieChart(canvas, default_params, default_params, options)
+        this.LineChart = new LineChart(canvas, domain, range, {options: options})
+
+        this.PieChart = new PieChart(canvas, default_params, default_params, {options: options})
 
         this._context.textAlign = "center"
         this._context.textBaseline = "middle"

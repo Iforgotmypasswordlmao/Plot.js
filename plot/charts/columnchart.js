@@ -18,9 +18,8 @@ export class ColumnChart extends Graph
             value = Math.min(this._range[1], value)
 
             const prev_column = column_width*d2
-            const middle_of_column = column_width/2
+            const middle_of_column = column_width*0.5
             const current_column = prev_column + middle_of_column
-
             const [bar_x, start_y] = this._get_point_on_canvas(current_column, this._range[0])
             const [nobody_cares_about_you_x, end_y] = this._get_point_on_canvas(current_column, value)
             const [label, colour] = [labels[d2], colours[d2 % colours.length]]
