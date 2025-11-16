@@ -4,7 +4,7 @@ export class ScatterPlot extends Grid
 {
     constructor(canvas, domain, range, { options={}})
     {
-        super(canvas, domain, range, options)
+        super(canvas, domain, range, {options: options})
     }
 
     /**

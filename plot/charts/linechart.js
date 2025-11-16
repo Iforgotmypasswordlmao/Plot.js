@@ -4,7 +4,8 @@ export class LineChart extends Grid
 {
     constructor(canvas, domain, range, { options={}})
     {
-        super(canvas, domain, range, options)
+        console.log(options)
+        super(canvas, domain, range, {options: options})
     }
 
     /**
